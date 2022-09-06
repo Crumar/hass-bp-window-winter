@@ -86,7 +86,7 @@ condition:
 action:
   - service: telegram_bot.send_message
     data:
-      message: 'Time to close {{ state_attr(!input contact_sensor,  'friendly_name') }}'
-      title: 'Close {{ state_attr(!input contact_sensor,  'friendly_name') }}.'
+      message: Time to close {{ state_attr(!input contact_sensor,  'friendly_name') }}
+      title: Close {{ state_attr(!input contact_sensor,  'friendly_name') }}
 
 mode: single
