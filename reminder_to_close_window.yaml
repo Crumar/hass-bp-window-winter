@@ -86,7 +86,7 @@ condition:
 action:
   - service: telegram_bot.send_message
     data:
-      message: "Time to close {{state_attr(trigger.event.data.entity_id, 'friendly_name')}}."
-      title: "Close {{state_attr(trigger.event.data.entity_id, 'friendly_name")}}!"
+      message: 'Time to close xzy.'
+      title: 'Close xzy'
 
 mode: single
