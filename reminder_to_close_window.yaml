@@ -19,7 +19,6 @@ blueprint:
       selector: 
         entity:
           domain: binary_sensor
-          multiple: true
     first_timer:
       name: 'First timer'
       description: 'The first notification timer (in minutes).'
