@@ -19,7 +19,6 @@ blueprint:
       selector: 
         entity:
           domain: binary_sensor
-          multiple: true
     first_timer:
       name: 'First timer'
       description: 'The first notification timer (in minutes).'
@@ -85,14 +84,8 @@ condition:
 
 # Send a notification to the mobile device. 
 action:
-  - service: notify.gotify_daniel
+  - service: telegram_bot.send_message
     data:
-      title: Time to close
-      message: {{trigger.to_state.attributes.friendly_name}}
-      target: 10
-  - service: notify.gotify_ruth
-    data:
-      title: Time to close
-      message: {{trigger.to_state.attributes.friendly_name}}
-      target: 10
+      message: Time to close {{trigger.to_state.attributes.friendly_name}}
+
 mode: single
