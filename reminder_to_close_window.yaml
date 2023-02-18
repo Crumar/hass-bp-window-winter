@@ -89,9 +89,10 @@ action:
     data:
       title: Time to close
       message: {{trigger.to_state.attributes.friendly_name}}
+      target: 10
   - service: notify.gotify_ruth
     data:
       title: Time to close
       message: {{trigger.to_state.attributes.friendly_name}}
-
+      target: 10
 mode: single
